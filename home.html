@@ -58,31 +58,34 @@
       </p>
 
       <div class="grid grid-cols-3 gap-3">
-        <button 
-         onclick="showForm('added')" class="btn flex-col h-full p-5 hover:shadow-xl btn-soft rounded-xl"
-        > 
+        <button
+          onclick="showForm('added')"
+          class="btn flex-col h-full p-5 hover:shadow-xl btn-soft rounded-xl"
+        >
           <img src="./assets/opt-1.png" alt="" />
           <p class="text-neutral/50">Add Money</p>
         </button>
-        <button onclick="showForm('cashout')"
+        <button
+          onclick="showForm('cashout')"
           class="btn flex-col h-full p-5 hover:shadow-xl btn-soft rounded-xl"
         >
           <img src="./assets/opt-2.png" alt="" />
           <p class="text-neutral/50">Cashout</p>
         </button>
         <button
+          onclick="showForm('Transfer')"
           class="btn flex-col h-full p-5 hover:shadow-xl btn-soft rounded-xl"
         >
           <img src="./assets/opt-3.png" alt="" />
           <p class="text-neutral/50">Transfer Money</p>
         </button>
-        <button
+        <button onclick="showForm('Bonus')"
           class="btn flex-col h-full p-5 hover:shadow-xl btn-soft rounded-xl"
         >
           <img src="./assets/opt-4.png" alt="" />
           <p class="text-neutral/50">Get Bonus</p>
         </button>
-        <button
+        <button 
           class="btn flex-col h-full p-5 hover:shadow-xl btn-soft rounded-xl"
         >
           <img src="./assets/opt-5.png" alt="" />
@@ -103,8 +106,10 @@
         <div class="card bg-base-100 w-full max-w-full shadow-xl rounded-2xl">
           <div class="card-body">
             <h2 class="font-semibold text-black text-[16px]">Select A Bank</h2>
-            <select id="Select-bank" class="select w-full rounded-full bg-base-200">
-              
+            <select
+              id="Select-bank"
+              class="select w-full rounded-full bg-base-200"
+            >
               <option disabled selected>Select bank</option>
               <option>DBBL</option>
               <option>MBBL</option>
@@ -193,9 +198,140 @@
       </div>
     </div>
 
+    <section class="Transfer-Money">
+      <div id="Transfer" class="form-box hidden w-11/12 mx-auto space-y-4">
+        <h2 class="font-bold text-black">Transfer Money</h2>
+        <div class="card bg-base-100 w-full max-w-full shadow-xl rounded-2xl">
+          <div class="card-body">
+            <fieldset class="fieldset">
+              <label class="label font-semibold text-black text-[16px]"
+                >User Account Number:</label
+              >
+              <input
+                type="number"
+                id="Transfer-Number"
+                class="input rounded-full bg-base-200 w-full"
+                placeholder="Enter 11 digit number"
+              />
+              <label class="label font-semibold text-black text-[16px]"
+                >Amount:</label
+              >
+              <input
+                type="number"
+                id="Transfer-Amount"
+                class="input rounded-full bg-base-200 w-full"
+                placeholder="Enter amount to transfer"
+              />
+              <label class="label font-semibold text-black text-[16px]"
+                >Pin Number:</label
+              >
+              <input
+                type="password"
+                id="Transfer-pin"
+                class="input rounded-full bg-base-200 w-full"
+                placeholder="Enter 4 digit pin number"
+              />
+              <button
+                id="Transfer-btn"
+                class="btn btn-neutral text-white mt-4 rounded-full bg-primary text-[18px]"
+              >
+                Send Now
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Get-Bonous">
+      <div id="Bonus" class="form-box hidden w-11/12 mx-auto space-y-4">
+        <h2 class="font-bold text-black">Get Bonus</h2>
+        <div class="card bg-base-100 w-full max-w-full shadow-xl rounded-2xl">
+          <div class="card-body">
+            <fieldset class="fieldset">
+              <label class="label font-semibold text-black text-[16px]"
+                >Enter Bonus Coupon:</label
+              >
+              <input
+                type="number"
+                id="bonus-Code"
+                class="input rounded-full bg-base-200 w-full"
+                placeholder="Enter your coupon"
+              />
+              
+            </fieldset>
+             <button
+                id="bonus-btn"
+                class="btn btn-neutral text-white mt-4 rounded-full bg-primary text-[18px]"
+              >
+                Get Bonus
+              </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="Pay-bill">
+ <div class="w-11/12 mx-auto space-y-4">
+        <h2 class="font-bold text-black">Pay Bill</h2>
+        <div class="card bg-base-100 w-full max-w-full shadow-xl rounded-2xl">
+          <div class="card-body">
+            <h2 class="font-semibold text-black text-[16px]">Select To Pay</h2>
+            <select
+              id="Select-bank"
+              class="select w-full rounded-full bg-base-200"
+            >
+              <option disabled selected>Select bank</option>
+              <option>DBBL</option>
+              <option>MBBL</option>
+              <option>City Bank</option>
+            </select>
+            <fieldset class="fieldset">
+              <label class="label font-semibold text-black text-[16px]"
+                >Biller Account Number:</label
+              >
+              <input
+                type="number"
+                id="Pay-Bill-Number"
+                class="input rounded-full bg-base-200 w-full"
+                placeholder="Enter account number"
+              />
+              <label class="label font-semibold text-black text-[16px]"
+                >Amount to Pay:</label
+              >
+              <input
+                type="number"
+                id="Pay-Bill-Amount"
+                class="input rounded-full bg-base-200 w-full"
+                placeholder="Add Amount to pay"
+              />
+              <label class="label font-semibold text-black text-[16px]"
+                >Pin Number:</label
+              >
+              <input
+                type="password"
+                id="Pay-Bill-pin"
+                class="input rounded-full bg-base-200 w-full"
+                placeholder="Enter 4 digit pin number"
+              />
+              <button
+                id="Pay-Bill-btn"
+                class="btn btn-neutral text-white mt-4 rounded-full bg-primary text-[18px]"
+              >
+               Pay Bill
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+</section>
+
 
     <script src="addMoney.js"></script>
     <script src="cashOut.js"></script>
     <script src="mashine.js"></script>
+    <script src="transferMoney.js"></script>
+    <script src="Bonus.js"></script>
+    <script src="PayBill.js"></script>
   </body>
 </html>
