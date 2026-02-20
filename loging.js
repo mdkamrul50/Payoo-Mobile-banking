@@ -7,7 +7,7 @@ document.getElementById('login-btn').addEventListener('click', function () {
   console.log(pin);
   if (number == '01772237629' && pin == '1122') {
     alert('login success');
-    window.location.assign('/home.html')
+    window.location.assign('home.html')
   } else {
     alert('login failed');
     return;
