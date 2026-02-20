@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Bank</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: 'Outfit', sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen max-w-md bg-base-200 mx-auto flex flex-col justify-center"
+  >
+    <div class="flex justify-center">
+      <img src="./assets/Logo-full.png" alt="" />
+    </div>
+    <div class="login-form pt-10">
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl mx-auto rounded-2xl"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label font-semibold text-black text-[16px]"
+              >Mobile Number</label
+            >
+            <input
+              type="text" id="input-number"
+              class="input rounded-full bg-base-200"
+              placeholder="Enter your number"
+            />
+            <label class="label font-semibold text-black text-[16px]"
+              >4 Digit Pin</label
+            >
+            <input 
+              type="password" id="input-pin"
+              class="input rounded-full bg-base-200" 
+              placeholder="Enter 4 Digit pin"
+            />
+            <button id="login-btn" class="btn btn-neutral mt-4 rounded-full bg-primary text-[18px]">Login</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="loging.js"></script>
+  </body>
+</html>
